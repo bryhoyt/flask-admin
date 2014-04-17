@@ -572,7 +572,8 @@ class BaseModelView(BaseView, ActionsMixin):
                     'arg': self.get_filter_arg(i, flt),
                     'operation': flt.operation(),
                     'options': flt.get_options(self) or None,
-                    'type': flt.data_type
+                    'type': flt.data_type,
+                    'description': getattr(flt, 'description', None),
                 })
 
                 self._filter_args[self.get_filter_arg(i, flt)] = (i, flt)

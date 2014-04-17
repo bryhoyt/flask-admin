@@ -84,6 +84,7 @@ var AdminFilters = function(element, filtersElement, filterGroups) {
                         .attr('name', makeName(filter.arg));
             $el.append($('<td/>').append($field));
         }
+        $field.attr('placeholder', filter.description);
 
         if (filter.type) {
             $field.attr('data-role', filter.type);
